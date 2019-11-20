@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="init()">
+    <h1>Cinema</h1>  
+    <table class="seats-container">
+        <tbody class="seats">
+        </tbody>
+    </table>  
+
+    <div class="popup" hidden>
+        <h2>Seat <span class="location">X-Y</span> - 
+        <span class="price"></span>$</h2>
+        <h3>There are <span class="availables"></span> free seats arround you.</h3>
+        <button onclick="buySeat()">Buy seat</button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

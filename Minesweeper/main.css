@@ -1,0 +1,23 @@
+
+.modal-content {
+    position: absolute;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 80%;
+    
+  }
+  .cell {
+    background: linear-gradient(to top, #761818, #761818, #761818, #761818, #761818, #B54041, #F3686A);
+    cursor: pointer;
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+.cell-mine {
+    background-color: gray;
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}

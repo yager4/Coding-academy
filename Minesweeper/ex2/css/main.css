@@ -1,0 +1,34 @@
+body {
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.seats-container {
+    display: inline;
+}
+
+.seats td {
+    width: 50px;
+    height: 80px;
+}
+
+.seats .seat {
+    background-color:brown;
+}
+
+.seats .selected {
+    background-color:orange;
+}
+
+.popup {
+    background-color: blueviolet;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.seats .taken{
+    background-color: #666;
+}

@@ -44,7 +44,7 @@ function checkCell(board, value) {
     var cell = board[i]
     for (var j = 0; j < board.length; j++) {
       if (cell[j] === value) {
-        var location= {
+        var location = {
           i: i,
           j: j
         }
@@ -55,6 +55,60 @@ function checkCell(board, value) {
     }
   }
   return valueCell
+}
+
+function convertTime(miliseconds) {
+
+
+  var totalSeconds = Math.floor(miliseconds / 1000);
+  var minutes = Math.floor(totalSeconds / 60);
+  var seconds = totalSeconds - minutes * 60;
+  var hour = Math.floor(totalSeconds / 3600);
+  if (minutes > 59) {
+    minutes = 0
+  }
+
+  gTimersObj.hour = hour
+  gTimersObj.minutes = minutes
+  gTimersObj.seconds = seconds
+  renderBoard(gBoard, '.board-container')
+
+}
+
+function checkTime() {
+  timeDifference = Date.now() - gInitialTime;
+  formatted = convertTime(timeDifference);
+
+
+}
+function convertTime(miliseconds) {
+
+
+  var totalSeconds = Math.floor(miliseconds / 1000);
+  var minutes = Math.floor(totalSeconds / 60);
+  var seconds = totalSeconds - minutes * 60;
+  var hour = Math.floor(totalSeconds / 3600);
+  if (minutes > 59) {
+    minutes = 0
+  }
+
+  gTimersObj.hour = hour
+  gTimersObj.minutes = minutes
+  gTimersObj.seconds = seconds
+  renderTimer()
+
+}
+function renderTimer() {
+
+
+
+  var strHTML = ''
+  var hour = gTimersObj.hour
+  var minutes = gTimersObj.minutes
+  var seconds = gTimersObj.seconds
+  strHTML = `<p>${hour} : ${minutes} : ${seconds}</p>`
+  var timerDisplay = document.querySelector('.timer')
+  timerDisplay.innerHTML = strHTML
 }
 
 

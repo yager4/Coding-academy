@@ -1,5 +1,5 @@
 body {
-  background-color: #222;
+  background-color: firebrick;
   text-align: center;
 }
 .board-container {
@@ -7,9 +7,6 @@ body {
   border: 0;
   
 }
-
-
-
   .cell {
     background-color: black;
     cursor: pointer;
@@ -23,4 +20,19 @@ body {
     width: 35px;
     height: 50px;
     border-radius: 7px;
+}
+.smile {
+  display: inline;
+  position:relative;
+
+
+}
+.smile-picture {
+width: 50px;
+
+
+}
+
+img:hover{
+  cursor: pointer;
 }

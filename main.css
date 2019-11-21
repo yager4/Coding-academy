@@ -1,0 +1,26 @@
+body {
+  background-color: #222;
+  text-align: center;
+}
+.board-container {
+  display: inline;
+  border: 0;
+  
+}
+
+
+
+  .cell {
+    background-color: black;
+    cursor: pointer;
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+.cell-mine {
+    background-color: gray;
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}

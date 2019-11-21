@@ -105,7 +105,7 @@ function cellClicked(elCell, i, j) {
         renderBoard(gBoard, '.board-container')
 
         if (victory(gBoard)) {
-
+         
             document.querySelector('.board-container').style.display = 'none'
             document.querySelector('h3').style.display = 'block'
             clearInterval(gTimer)
@@ -120,7 +120,7 @@ function createMine(mat) {
     var numInclud = []
     var num;
     var size = mat.length
-    for (var i = 0; i < gLevel.MINES; i++) {
+   for (var i = 0; i < gLevel.MINES; i++) {
 
 
 
@@ -147,6 +147,7 @@ function createMine(mat) {
         mat[randNumRow][randNumCol].isMine = true
 
     }
+ 
 }
 
 function ifTheNumIsIncludes(mat, indexI, indexj) {
@@ -204,7 +205,7 @@ function renderBoard(mat, selector, pic = 'smile.png') {
 
 
 function expandShown(mat, posI, posJ, nonReveal = false) {
-    debugger
+    
     for (var i = posI - 1; i <= posI + 1; i++) {
         if (i < 0 || i >= mat.length) continue;
 
@@ -354,12 +355,11 @@ function countIsShown(mat) {
         }
     }
 
-
-    return (counter === (gLevel.SIZE * gLevel.SIZE) - 1 /*gLevel.MINES*/)
+    return (counter === (gLevel.SIZE * gLevel.SIZE) - gLevel.MINES)
 }
 
 function hintIsClicked(elLight) {
-    debugger
+   
 
     if (elLight.src === 'lightBulbOff.jpg') {
         return
@@ -381,7 +381,7 @@ function hintIsClicked(elLight) {
 }
 function randerHint() {
 
-debugger
+
     var pic = 'lightbulpOn.jpg'
 
     var strHTML = `<img style="padding:10px" onclick="hintIsClicked(this)" src= ${pic} class="smile-picture" />`
